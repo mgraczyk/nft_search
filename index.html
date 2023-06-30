@@ -1,0 +1,50 @@
+<html>
+  <head>
+  <style type="text/css">
+    body {
+      font-family: "-apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif";
+      font-size: 1.2em;
+    }
+    #drop_zone {
+      border: 2px dashed black;
+      margin-top: 0.5em;
+      width:  400px;
+      height: 120px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Upload NFT to Search</h2>
+      <form id="image-form" action="">
+        <input
+          type="text"
+          name="url"
+          placeholder="...http://www.ico.com/image.png"
+          style="min-width:30em" />
+        <p>Or upload a file</p>
+        <input
+          id="fileInput"
+          type="file"
+          name="file"
+          onchange="form.submit()" />
+        <div id="drop_zone">Or drop file here</div>
+      </form>
+
+      <div id="result_container">
+        <h3 id="status">Loading...</h3>
+        <!--<a href="{{image_url}}" target="_blank">{{image_url}}</a>-->
+        <!--<br/>-->
+        <!--<img src="{{image_url}}" />-->
+      </div>
+      <div id="query-img-container" style="width:400; height:400;">
+      </div>
+
+      <div id="error-container">
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
